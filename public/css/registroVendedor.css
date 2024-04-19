@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa; 
+    color: #333333;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.columna-izquierda {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+}
+.columna-derecha {
+    float: left;
+    width: 45%;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.btn-primary {
+    --bs-btn-bg: #FF7312!important;
+    --bs-btn-border-color: #FF7312!important;
+    --bs-btn-hover-bg: #c55b0e!important;
+    --bs-btn-hover-border-color:#c55b0e!important;
+    --bs-btn-active-bg: #c55b0e!important;
+    --bs-btn-active-border-color: #c55b0e!important;
+}

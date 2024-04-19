@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    background: white;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.invoice-details {
+    margin-bottom: 20px;
+}
+
+.invoice-details p {
+    margin: 5px 0;
+}
+
+.invoice-items {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.invoice-items th, .invoice-items td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.print-button {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde el lado derecho */
+}
+
+.print-button button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button a {
+    padding: 10px 20px;
+    background-color: #008584;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}

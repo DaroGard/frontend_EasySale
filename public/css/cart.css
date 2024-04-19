@@ -1,0 +1,26 @@
+.img-cart{
+    width: 150px;
+    height: 150px;
+}
+
+.table th{
+    background: aliceblue!important;
+}
+
+.btn-success {
+    --bs-btn-bg: #FF9E01!important;
+    --bs-btn-border-color: #FF9E01!important;
+    --bs-btn-hover-bg: #c07702!important;
+    --bs-btn-hover-border-color: #c07702!important;
+    --bs-btn-active-bg: #c07702!important;
+    --bs-btn-active-border-color: #c07702!important;
+}
+
+.btn-primary {
+    --bs-btn-bg: #FF7312!important;
+    --bs-btn-border-color: #FF7312!important;
+    --bs-btn-hover-bg: #c55b0e!important;
+    --bs-btn-hover-border-color:#c55b0e!important;
+    --bs-btn-active-bg: #c55b0e!important;
+    --bs-btn-active-border-color: #c55b0e!important;
+}

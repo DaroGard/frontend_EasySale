@@ -1,0 +1,46 @@
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+}
+.table-container {
+    overflow-x: auto;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Fondo de filas impares */
+}
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff; /* Fondo de filas pares */
+}
+.table th, td {
+    color: #006666;
+}
+.form-group{
+    padding: 10px 0;
+}
+
+.list-group-item{
+    padding: 1rem;
+}
+
+.agregar-producto {
+    background-color:#FF9E01;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#panel{
+    background: #FF7312;
+    color: white;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.btn-primary {
+    --bs-btn-bg: #FF7312!important;
+    --bs-btn-border-color: #FF7312!important;
+    --bs-btn-hover-bg: #c55b0e!important;
+    --bs-btn-hover-border-color:#c55b0e!important;
+    --bs-btn-active-bg: #c55b0e!important;
+    --bs-btn-active-border-color: #c55b0e!important;
+}
