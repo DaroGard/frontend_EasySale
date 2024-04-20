@@ -23,10 +23,9 @@
             <h1>NombreUsuario</h1>
         </div>
         <div id="compradorImg">
-            <img src="{{asset('img/default-picture.png')}}">
+            <img src="{{asset('img/default-picture.png')}}" data-bs-toggle="modal" data-bs-target="#editarCuentaModal">
         </div>
     </div>
-
   </div>
 <!--Categorias-->
   <ul class="nav justify-content-center">
@@ -58,7 +57,7 @@
 <!--Items-->
   <div class="container text-center">
     <div class="row row-cols-3">
-
+<!--
       <div class="col">
         <div class="container-categories text-center">
           <div class="container-box categorie row row-cols-auto">
@@ -75,60 +74,54 @@
           </div>
         </div>
       </div>
-
-      <div class="col">
-        <div class="container-categories text-center">
-          <div class="container-box categorie row row-cols-auto">
-            <div class="card col">
-              <img src="https://th.bing.com/th/id/OIP.ed-29-ckMum--DpdlJRKHgHaFW?rs=1&pid=ImgDetMain" class="card-img-top" alt="Imagen">
-              <div class="card-body">
-                <h5 class="card-title">$200</h5>
-                <hr>
-                <p class="card-text">Windows Xp, 1GB RAM, 16 GB HDD,Celeron N300</p>
-                <br>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="container-categories text-center">
-          <div class="container-box categorie row row-cols-auto">
-            <div class="card col">
-              <img src="https://th.bing.com/th/id/OIP.ed-29-ckMum--DpdlJRKHgHaFW?rs=1&pid=ImgDetMain" class="card-img-top" alt="Imagen">
-              <div class="card-body">
-                <h5 class="card-title">$200</h5>
-                <hr>
-                <p class="card-text">Windows Xp, 1GB RAM, 16 GB HDD,Celeron N300</p>
-                <br>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="container-categories text-center">
-          <div class="container-box categorie row row-cols-auto">
-            <div class="card col">
-              <img src="https://th.bing.com/th/id/OIP.ed-29-ckMum--DpdlJRKHgHaFW?rs=1&pid=ImgDetMain" class="card-img-top" alt="Imagen">
-              <div class="card-body">
-                <h5 class="card-title">$200</h5>
-                <hr>
-                <p class="card-text">Windows Xp, 1GB RAM, 16 GB HDD,Celeron N300</p>
-                <br>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+-->
 
     </div>
   </div>
+
+  <!-- Modal de edición de cuenta -->
+  <div class="modal fade" id="editarCuentaModal" tabindex="-1" aria-labelledby="editarCuentaModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="editarCuentaModalLabel">Editar información de la cuenta</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <!-- Formulario de edición de cuenta -->
+              <form>
+                  <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre:</label>
+                      <input type="text" class="form-control" id="nombre"
+                          value="#">
+                  </div>
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label">Apellido:</label>
+                    <input type="text" class="form-control" id="nombre"
+                        value="#">
+                </div>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Telefono:</label>
+                  <input type="text" class="form-control" id="nombre"
+                      value="#">
+              </div>
+                  <div class="mb-3">
+                      <label for="correo" class="form-label">Correo electrónico:</label>
+                      <input type="email" class="form-control" id="correo"
+                          value="[Correo Electronico]" disabled>
+                  </div>
+                  <div class="mb-3">
+                      <label for="contrasena" class="form-label">Contraseña:</label>
+                      <input type="password" class="form-control" id="contrasena">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                  <a type="button" class="btn btn-dark" href="{{route('home-principal')}}">Cerrar Sesion</a>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
 
 </body>
 

@@ -8,6 +8,8 @@
 }
 
 .btn-success {
+    background-color: #FF9E01!important;
+    border-color: #FF9E01!important;
     --bs-btn-bg: #FF9E01!important;
     --bs-btn-border-color: #FF9E01!important;
     --bs-btn-hover-bg: #c07702!important;
@@ -17,6 +19,8 @@
 }
 
 .btn-primary {
+    background-color: #FF7312!important;
+    border-color: #FF7312!important;
     --bs-btn-bg: #FF7312!important;
     --bs-btn-border-color: #FF7312!important;
     --bs-btn-hover-bg: #c55b0e!important;

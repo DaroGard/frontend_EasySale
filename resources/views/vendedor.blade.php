@@ -18,6 +18,7 @@
                 <!-- Botón para abrir el modal de edición de cuenta -->
                 <button type="button" class="btn btn-dark" data-bs-toggle="modal"
                     data-bs-target="#editarCuentaModal">Editar cuenta</button>
+                    <a type="button" class="btn btn-dark" href="{{route('home-principal')}}">Cerrar Sesion</a>
                 <br>
                 <br>
                 <h4>Inventario de productos</h4>

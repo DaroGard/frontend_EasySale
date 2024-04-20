@@ -36,7 +36,7 @@
             </div>
             <a href="{{ route('home-principal') }}" type="submit" class="btn btn-primary">Registrarse</a>
         </form>
-        <p class="mt-3 text-center">¿Ya tienes una cuenta? <a href="{{ route('login-cliente') }}">Inicia sesión</a></p>
+        <p class="mt-3 text-center">¿Ya tienes una cuenta? <a href="{{ route('login-comprador') }}">Inicia sesión</a></p>
     </div>
 </body>
 </html>

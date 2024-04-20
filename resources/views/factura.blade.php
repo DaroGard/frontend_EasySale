@@ -56,7 +56,7 @@
         </div>
     </div>
     <div class="back-button">
-        <a href="{{ route('home-principal') }}" class="btn btn-succes">Regresar a la página principal</a>
+        <a href="{{ route('comprador') }}" class="btn btn-succes">Regresar a la página principal</a>
     </div>
 </body>
 </html>

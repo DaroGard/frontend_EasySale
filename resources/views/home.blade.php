@@ -54,7 +54,7 @@
 <!--Items-->
   <div class="container text-center">
     <div class="row row-cols-3">
-
+  <!--
       <div class="col">
         <div class="container-categories text-center">
           <div class="container-box categorie row row-cols-auto">
@@ -71,58 +71,7 @@
           </div>
         </div>
       </div>
-
-      <div class="col">
-        <div class="container-categories text-center">
-          <div class="container-box categorie row row-cols-auto">
-            <div class="card col">
-              <img src="https://th.bing.com/th/id/OIP.ed-29-ckMum--DpdlJRKHgHaFW?rs=1&pid=ImgDetMain" class="card-img-top" alt="Imagen">
-              <div class="card-body">
-                <h5 class="card-title">$200</h5>
-                <hr>
-                <p class="card-text">Windows Xp, 1GB RAM, 16 GB HDD,Celeron N300</p>
-                <br>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="container-categories text-center">
-          <div class="container-box categorie row row-cols-auto">
-            <div class="card col">
-              <img src="https://th.bing.com/th/id/OIP.ed-29-ckMum--DpdlJRKHgHaFW?rs=1&pid=ImgDetMain" class="card-img-top" alt="Imagen">
-              <div class="card-body">
-                <h5 class="card-title">$200</h5>
-                <hr>
-                <p class="card-text">Windows Xp, 1GB RAM, 16 GB HDD,Celeron N300</p>
-                <br>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="container-categories text-center">
-          <div class="container-box categorie row row-cols-auto">
-            <div class="card col">
-              <img src="https://th.bing.com/th/id/OIP.ed-29-ckMum--DpdlJRKHgHaFW?rs=1&pid=ImgDetMain" class="card-img-top" alt="Imagen">
-              <div class="card-body">
-                <h5 class="card-title">$200</h5>
-                <hr>
-                <p class="card-text">Windows Xp, 1GB RAM, 16 GB HDD,Celeron N300</p>
-                <br>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    -->
     </div>
   </div>
 

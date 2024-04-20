@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    function loginData() {
+    function loginVendedorData() {
         let email = document.getElementById("email").value;
         let password = document.getElementById("password").value;
 
@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Evento onclick para el botón "Sign in"
-    document.getElementById("iniciarSesion").addEventListener("click", loginData);
+    document.getElementById("iniciarSesion").addEventListener("click", loginVendedorData);
 });
