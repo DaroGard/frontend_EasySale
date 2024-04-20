@@ -24,54 +24,42 @@
             <div class="mb-3 flex -mx-2">
                 <div class="px-2">
                     <label for="type1" class="flex items-center cursor-pointer">
-                        <input type="radio" class="form-radio h-5 w-5 text-indigo-500" name="type" id="type1"
-                            checked>
+                        <input type="radio" class="form-radio h-5 w-5 text-indigo-500" name="type" id="type1" checked>
                         <img src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png" class="h-8 ml-3">
                     </label>
                 </div>
             </div>
             <div class="mb-3">
-                <label class="font-bold text-sm mb-2 ml-1">Direccion del pedido</label>
-                <div>
-                    <input
-                        class="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
-                        placeholder="Ingrese la direccion del pedido" type="text" />
-                </div>
-            </div>
-            <div class="mb-3">
                 <label class="font-bold text-sm mb-2 ml-1">Numero de la Tarjeta</label>
                 <div>
-                    <input
-                        class="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
-                        placeholder="0000 0000 0000 0000" type="text" />
+                    <input id="tarjeta" name="tarjeta"
+                        class="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors" placeholder="0000 0000 0000 0000" type="text" />
                 </div>
             </div>
             <div class="mb-3 -mx-2 flex items-end">
                 <div class="px-2 w-1/2">
-                    <label class="font-bold text-sm mb-2 ml-1">Expiration date</label>
+                    <label class="font-bold text-sm mb-2 ml-1">Fecha de expiracion</label>
                     <div>
-                        <select
+                        <select id="mes" name="mes"
                             class="form-select w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors cursor-pointer">
-                            <option value="01">01 - January</option>
-                            <option value="02">02 - February</option>
-                            <option value="03">03 - March</option>
-                            <option value="04">04 - April</option>
-                            <option value="05">05 - May</option>
-                            <option value="06">06 - June</option>
-                            <option value="07">07 - July</option>
-                            <option value="08">08 - August</option>
-                            <option value="09">09 - September</option>
-                            <option value="10">10 - October</option>
-                            <option value="11">11 - November</option>
-                            <option value="12">12 - December</option>
+                            <option value="01">01 - Enero</option>
+                            <option value="02">02 - Febrero</option>
+                            <option value="03">03 - Marzo</option>
+                            <option value="04">04 - Abril</option>
+                            <option value="05">05 - Mayo</option>
+                            <option value="06">06 - Junio</option>
+                            <option value="07">07 - Julio</option>
+                            <option value="08">08 - Agosto</option>
+                            <option value="09">09 - Septiembre</option>
+                            <option value="10">10 - Octubre</option>
+                            <option value="11">11 - Noviembre</option>
+                            <option value="12">12 - Deciembre</option>
                         </select>
                     </div>
                 </div>
                 <div class="px-2 w-1/2">
-                    <select
+                    <select id="ano" name="ano"
                         class="form-select w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors cursor-pointer">
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
@@ -84,20 +72,20 @@
                 </div>
             </div>
             <div class="mb-10">
-                <label class="font-bold text-sm mb-2 ml-1">Security code</label>
+                <label class="font-bold text-sm mb-2 ml-1">Codigo de Seguridad</label>
                 <div>
-                    <input
+                    <input id="codigo" name="codigo"
                         class="w-32 px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
                         placeholder="000" type="text" />
                 </div>
             </div>
             <div>
-                <a href="{{ route('factura-comprador') }}"
-                    class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
-                    style="text-align: center;"><i class="mdi mdi-lock-outline mr-1"></i> Comprar Ahora!</a>
+                <a href="{{ route('factura-comprador') }}" type="submit" class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold" style="text-align: center;" onclick="guardarInfoPago()"><i class="mdi mdi-lock-outline mr-1"></i>¡Comprar Ahora!</a>
             </div>
         </div>
     </div>
+
+    <script src="{{ url('js/pagar.js') }}"></script>
 
 </body>
 </html>

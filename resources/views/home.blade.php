@@ -54,6 +54,24 @@
 <!--Items-->
   <div class="container text-center">
     <div class="row row-cols-3">
+    @foreach ($productos as $producto)
+    <div class="col">
+      <div class="container-categories text-center">
+        <div class="container-box categorie row row-cols-auto">
+          <div class="card col">
+            <img src="{{ asset($producto->imagen) }}" class="card-img-top" alt="Imagen">
+            <div class="card-body">
+              <h5 class="card-title">${{$producto->precio}}</h5>
+              <hr>
+              <p class="card-text">{{$producto->descripcion}}</p>
+              <br>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @endforeach
   <!--
       <div class="col">
         <div class="container-categories text-center">

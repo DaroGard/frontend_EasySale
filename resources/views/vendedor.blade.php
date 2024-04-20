@@ -16,9 +16,8 @@
                 <br>
                 <h2 id="panel">Panel de control del vendedor</h2>
                 <!-- Botón para abrir el modal de edición de cuenta -->
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                    data-bs-target="#editarCuentaModal">Editar cuenta</button>
-                    <a type="button" class="btn btn-dark" href="{{route('home-principal')}}">Cerrar Sesion</a>
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#editarCuentaModal">Editar cuenta</button>
+                <a type="button" class="btn btn-dark" href="{{ route('home-principal') }}">Cerrar Sesion</a>
                 <br>
                 <br>
                 <h4>Inventario de productos</h4>
@@ -50,7 +49,17 @@
                                 <td>100</td>
                                 <td>
                                     <a href="#" class="btn btn-primary">Editar</a>
-                                    <a href="#" class="btn btn-danger">Eliminar</a>
+                                    <a href="#" class="btn btn-danger" onclick="eliminarProducto()">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Producto A</td>
+                                <td>$50</td>
+                                <td>100</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary">Editar</a>
+                                    <a href="#" class="btn btn-danger" onclick="eliminarProducto()">Eliminar</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -68,8 +77,7 @@
                         </div>
                         <div class="form-group">
                             <label for="precio">Precio:</label>
-                            <input type="number" class="form-control" id="precio" name="precio"
-                                placeholder="Ingrese el precio" required min="0">
+                            <input type="number" class="form-control" id="precio" name="precio" placeholder="Ingrese el precio" required min="0">
                         </div>
                         <div class="form-group">
                             <label for="descripcion">Descripción:</label>
@@ -78,13 +86,9 @@
                         <div class="form-group">
                             <label for="categoria">Categoría:</label>
                             <select class="form-control" id="categoria" name="categoria" required>
-                                <option value="electronicos">Electronicos</option>
-                                <option value="ropa mujer">Ropa Mujer</option>
-                                <option value="ropa hombre">Ropa Hombre</option>
-                                <option value="ropa niño">Ropa Niño</option>
-                                <option value="ropa niña">Ropa Niña</option>
-                                <option value="hogar">Hogar</option>
-                                <option value="herramientas">Herramientas</option>
+                                <option value="ropa">Ropa</option>
+                                <option value="zapatos">Zapatos</option>
+                                <option value="accesorios">Accesorios</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -105,8 +109,7 @@
             </div>
         </div>
         <!-- Modal de edición de cuenta -->
-        <div class="modal fade" id="editarCuentaModal" tabindex="-1" aria-labelledby="editarCuentaModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="editarCuentaModal" tabindex="-1" aria-labelledby="editarCuentaModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -114,38 +117,38 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- Formulario de edición de cuenta -->
-                        <form>
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="nombre"
-                                    value="Nombre del Vendedor" disabled>
-                            </div>
-                            <div class="mb-3">
-                                <label for="descripcion" class="form-label">Descripcion:</label>
-                                <textarea type="text" class="form-control" id="descripcion" value="Descripcion del Vendedor"></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="correo" class="form-label">Correo electrónico:</label>
-                                <input type="email" class="form-control" id="correo"
-                                    value="[Correo del Vendedor]" disabled>
-                            </div>
-                            <div class="mb-3">
-                                <label for="contrasena" class="form-label">Contraseña:</label>
-                                <input type="password" class="form-control" id="contrasena">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                        </form>
-                    </div>
+                    <!-- Formulario de edición de cuenta -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" value="Nombre del Vendedor" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripcion:</label>
+                            <textarea type="text" class="form-control" id="descripcion" value="Descripcion del Vendedor"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo electrónico:</label>
+                            <input type="email" class="form-control" id="correo" value="[Correo del Vendedor]" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contrasena" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="contrasena" value="contraseña del vendedor">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cantidad" class="form-label">Confirmar Contraseña:</label>
+                            <input type="number" class="form-control" id="cantidad" min="0" value="Cantidad disponible">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 
         <script src="{{ url('js/vendedor.js') }}"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
