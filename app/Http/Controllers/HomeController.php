@@ -15,10 +15,15 @@ class HomeController extends Controller
             'verify' => false,
         ]);
 
-        $response = $client->request('GET', '/api/producto/todos');
-        $productos = json_decode($response->getBody()->getContents());
+        $responseProductos = $client->request('GET', '/api/producto/todos');
+        $responseCategorias = $client->request('GET', '/api/categoria/todas');
 
-        return view('home', compact('productos'));
+        // Decodificar los datos obtenidos de las respuestas
+        $productos = json_decode($responseProductos->getBody()->getContents());
+        $categorias = json_decode($responseCategorias->getBody()->getContents());
+
+        // Pasar los productos y categorías a la vista
+        return view('home', compact('productos', 'categorias'));
     }
 
     public function cart(){
