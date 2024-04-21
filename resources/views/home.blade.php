@@ -18,10 +18,8 @@
         <div class="cart-icon">
             <a href="{{ route('home-cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
-        <div id="homeButtons">
-            <a href="{{ route('login-vendedor') }}" class=" btn btn-success">Soy Vendedor</a>
-            <a href="{{ route('login-comprador') }}" class="btn btn-outline-primary">
-                <i class="fas fa-user"></i>Iniciar Sesion</a>
+        <div id="homeButtons"><a href="{{ route('login-vendedor') }}" class=" btn btn-success">Soy Vendedor</a>
+            <a href="{{ route('login-comprador') }}" class="btn btn-outline-primary"><i class="fas fa-user"></i>Iniciar Sesion</a>
         </div>
     </div>
     <!--Categorias-->

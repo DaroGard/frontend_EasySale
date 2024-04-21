@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    document.getElementById("iniciarSesion").addEventListener("click", function() {
+        document.forms[0].submit(); // Envía el formulario
+    });
+
     function loginData() {
         let email = document.getElementById("email").value;
         let password = document.getElementById("password").value;
@@ -33,3 +38,4 @@ document.addEventListener('DOMContentLoaded', function() {
 function regresar() {
     window.location.href = "home";
 }
+

@@ -55,3 +55,7 @@ Route::post('/guardarCliente', [RegistroClienteController::class, 'guardarClient
 Route::get('/registroVendedor', [RegistroVendedorController::class, 'registroVendedor'])->name('registro-vendedor');
 
 Route::post('/guardarVendedor', [RegistroVendedorController::class, 'guardarVendedor'])->name('guardar-vendedor');
+
+Route::post('/verificacion', [LoginController::class, 'verificarCredenciales'])->name('verificar-comprador');
+
+Route::post('/verificacionPagar', [LoginController::class, 'verificarCredencialesPagar'])->name('verificar-pagar');
