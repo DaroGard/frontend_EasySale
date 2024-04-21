@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\VendedorController;
+use App\Http\Controllers\RegistroClienteController;
+use App\Http\Controllers\RegistroVendedorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +47,11 @@ Route::get('/factura', [CartController::class, 'factura'])->name('factura-compra
 Route::get('/comprador', [CompradorController::class, 'comprador'])->name('comprador');
 
 Route::get('/cartComprador', [HomeController::class, 'cartComprador'])->name('comprador-cart');
+
+Route::get('/registroCliente', [RegistroClienteController::class, 'registroComprador'])->name('registro-comprador');
+
+Route::post('/guardarCliente', [RegistroClienteController::class, 'guardarCliente'])->name('guardar-comprador');
+
+Route::get('/registroVendedor', [RegistroVendedorController::class, 'registroVendedor'])->name('registro-vendedor');
+
+Route::post('/guardarVendedor', [RegistroVendedorController::class, 'guardarVendedor'])->name('guardar-vendedor');

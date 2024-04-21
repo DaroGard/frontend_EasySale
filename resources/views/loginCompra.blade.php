@@ -12,7 +12,7 @@
 <body>
     <div class="flex min-h-full flex-col   justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img style="width: 46%; margin-left: 24%;" src="{{ asset('img/Logo.png') }}" alt="logo.png"
+            <img style="width: 46%; margin-left: 24%;" src="{{ asset('img/Logo.png') }}" onclick="regresar()" alt="logo.png"
                 onclick="regresar()" id="logo">
             <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Iniciar sesión en su cuenta</h2>
         </div>

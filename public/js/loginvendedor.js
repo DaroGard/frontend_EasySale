@@ -29,3 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Evento onclick para el botón "Sign in"
     document.getElementById("iniciarSesion").addEventListener("click", loginVendedorData);
 });
+
+function regresar() {
+    window.location.href = "home";
+}

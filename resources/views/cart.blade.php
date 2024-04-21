@@ -26,7 +26,7 @@
             </tbody>
         </table>
         <div class="pay">
-            <a type="button" class="btn btn-success" href="{{route('login-comprador')}}" onclick="verificarUsuario(event)">Pagar</a>
+            <a type="button" class="btn btn-success" href="{{route('login-compra')}}" onclick="verificarUsuario(event)">Pagar</a>
             <a type="button" class="btn btn-primary" href="{{route('home-principal')}}">Regresar</a>
         </div>
     </div>
