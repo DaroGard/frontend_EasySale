@@ -25,3 +25,29 @@ function addToCart(nombreproducto, precio, img, cantidadproducto, idvendedor) {
     // Mostrar un mensaje de éxito o realizar otras acciones si lo deseas
     alert('Producto agregado al carrito');
 }
+
+var todosLosProductos = document.querySelectorAll('.container-box');
+
+    function mostrarTodos() {
+        // Eliminar todos los productos del DOM
+        var contenedorProductos = document.getElementById('productosContainer');
+        contenedorProductos.innerHTML = '';
+
+        // Agregar todos los productos guardados
+        todosLosProductos.forEach(function(producto) {
+            contenedorProductos.appendChild(producto.cloneNode(true));
+        });
+    }
+
+    function filtrarPorCategoria(categoriaId) {
+        // Eliminar todos los productos del DOM
+        var contenedorProductos = document.getElementById('productosContainer');
+        contenedorProductos.innerHTML = '';
+
+        // Agregar solo los productos de la categoría seleccionada
+        todosLosProductos.forEach(function(producto) {
+            if (producto.dataset.categoria === categoriaId) {
+                contenedorProductos.appendChild(producto.cloneNode(true));
+            }
+        });
+    }

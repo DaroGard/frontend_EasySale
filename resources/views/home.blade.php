@@ -26,19 +26,20 @@
     </div>
     <!--Categorias-->
     <ul class="nav justify-content-center">
+        <button class="btn btn-primary" onclick="mostrarTodos()">Todos</button>
         @foreach ($categorias as $categoria)
             <li class="nav-item">
-                <span class="boton-categoria">{{ $categoria->nombrecategoria }}</span>
+                <span class="boton-categoria" onclick="filtrarPorCategoria('{{ $categoria->idcategoria }}')">{{ $categoria->nombrecategoria }}</span>
             </li>
         @endforeach
     </ul>
     <!--Items-->
     <div class="container text-center">
-        <div class="row row-cols-3">
+        <div class="row row-cols-3" id="productosContainer">
             @foreach ($productos as $producto)
                 <div class="col">
                     <div class="container-categories text-center">
-                        <div class="container-box categorie row row-cols-auto">
+                        <div class="container-box categorie row row-cols-auto" data-categoria="{{ $producto->categoria->idcategoria }}">
                             <div class="card col">
                                 <img src="{{ asset($producto->imagen) }}" class="card-img-top" alt="Imagen">
                                 <div class="card-body">
