@@ -13,7 +13,7 @@ class RegistroClienteController extends Controller
         return view('registro');
     }
 
-    public function guardarVendedor(Request $request)
+    public function guardarCliente(Request $request)
     {
         $nombre = $request->input('nombre');
         $apellido = $request->input('apellido');
