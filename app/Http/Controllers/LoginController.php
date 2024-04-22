@@ -119,4 +119,38 @@ class LoginController extends Controller
             return response()->json(['mensaje' => 'Error al enviar la solicitud a la API externa'], 500);
         }
     }
+
+    public function verificarCredencialesVendedor(Request $request)
+    {
+        $request->validate([
+            'correoelectronico' => 'required|email',
+            'contrasena' => 'required|string',
+        ]);
+
+        $correoelectronico = $request->input('correoelectronico');
+        $contrasena = $request->input('contrasena');
+
+        $client = new Client();
+
+        try {
+            $response = $client->post('http://localhost:8080/api/vendedor/autenticacion', [
+                'form_params' => [
+                    'correoelectronico' => $correoelectronico,
+                    'contrasena' => $contrasena
+                ]
+            ]);
+
+            $body = json_decode($response->getBody(), true);
+
+            if (!empty($body['idvendedor'])) {
+                Session::put('vendedor', $body);
+
+                return redirect()->route('vendedor-productos');
+            } else {
+                return response()->json(['mensaje' => 'Correo o contraseña incorrectos'], 401);
+            }
+        } catch (RequestException $e) {
+            return response()->json(['mensaje' => 'Error al enviar la solicitud a la API externa'], 500);
+        }
+    }
 }

@@ -1,25 +1,26 @@
-
 function filtrarProductos(categoria) {
+    console.log("Categoría seleccionada:", categoria);
     let tabla = document.getElementById('tablaProductos');
     let filas = tabla.getElementsByTagName('tr');
-    for (let i = 1; i < filas.length; i++) {
-        let categoriaProducto = filas[i].getElementsByTagName('td')[1].textContent; // Obtener la categoría del producto (suponiendo que está en la segunda columna)
-        if (categoria === '' || categoriaProducto.toLowerCase().includes(categoria.toLowerCase())) {
-            filas[i].style.display = '';
-        } else {
-            filas[i].style.display = 'none';
+    for (let i = 0; i < filas.length; i++) {
+        let celdas = filas[i].getElementsByTagName('td');
+        if (celdas.length > 1) { // Asegúrate de que haya al menos dos celdas en la fila
+            let categoriaProducto = celdas[0].textContent.trim().toLowerCase(); // Suponiendo que la categoría está en la primera columna
+            if (categoria === '' || categoriaProducto.includes(categoria.toLowerCase())) {
+                filas[i].style.display = '';
+            } else {
+                filas[i].style.display = 'none';
+            }
         }
     }
 }
 
-function alertaAgregar() {
-    //IDEA SOLO DEBE DE MOSTRARLA SI SE LLENAN TODOS LOS CAMPOS
-    alert("Se ha agregado un nuevo producto.");
-}
-
-function eliminarProducto() {
-    if (confirm("¿Estás seguro de que quieres eliminar este producto?")) {
-        // IDEA lógica para eliminar el producto
-        alert("El producto ha sido eliminado correctamente.");
-    }
+function editarProducto(id, nombre, precio, cantidad, imagen) {
+    document.getElementById('nombreProducto').value = nombre;
+    document.getElementById('precioProducto').value = precio;
+    document.getElementById('cantidadProducto').value = cantidad;
+    document.getElementById('imagenProducto').src = imagen;
+    document.getElementById('urlImagen').value = imagen;
+    // Establecer la acción del formulario con el ID del producto
+    document.getElementById('editarProductoForm').action = "actualizarProducto/" + id;
 }

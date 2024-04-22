@@ -51,3 +51,14 @@ var todosLosProductos = document.querySelectorAll('.container-box');
             }
         });
     }
+
+    function cerrarSesion(event) {
+        // Prevenir el comportamiento predeterminado del enlace
+        event.preventDefault();
+    
+        // Eliminar todos los datos del localStorage
+        localStorage.clear();
+    
+        // Redireccionar al usuario a la página de inicio de sesión
+        window.location.href = event.target.getAttribute('href');
+    }

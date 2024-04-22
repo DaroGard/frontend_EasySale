@@ -107,7 +107,7 @@
                             <input type="password" class="form-control" id="contrasena">
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                        <a type="button" class="btn btn-dark" href="{{ route('home-principal') }}">Cerrar Sesion</a>
+                        <a onclick="cerrarSesion(event)" type="button" class="btn btn-dark" href="{{ route('home-principal') }}">Cerrar Sesion</a>
                     </form>
                 </div>
             </div>

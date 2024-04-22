@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\VendedorController;
 use App\Http\Controllers\RegistroClienteController;
 use App\Http\Controllers\RegistroVendedorController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +60,9 @@ Route::post('/guardarVendedor', [RegistroVendedorController::class, 'guardarVend
 Route::post('/verificacion', [LoginController::class, 'verificarCredenciales'])->name('verificar-comprador');
 
 Route::post('/verificacionPagar', [LoginController::class, 'verificarCredencialesPagar'])->name('verificar-pagar');
+
+Route::post('/verificacionVendedor', [LoginController::class, 'verificarCredencialesVendedor'])->name('verificar-vendedor');
+
+Route::post('/agregarProducto', [ProductoController::class, 'guardarProducto'])->name('guardar-producto');
+
+Route::put('/actualizarProducto/{id}', [ProductoController::class, 'actualizarProducto'])->name('actualizar-producto');
